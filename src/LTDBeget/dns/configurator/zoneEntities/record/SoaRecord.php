@@ -95,11 +95,11 @@ class SoaRecord extends Record
         return $this->getMainRecordPart() . ' ' . implode(' ', [
             $this->getMName(),
             $this->getRName(),
-            $this->getSerial(),
+            '(' . $this->getSerial(),
             $this->getRefresh(),
             $this->getRetry(),
             $this->getExpire(),
-            $this->getMinimum()
+            $this->getMinimum() . ')'
         ]);
     }
 
